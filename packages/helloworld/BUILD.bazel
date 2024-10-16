@@ -10,6 +10,6 @@ go_binary(
 go_library(
     name = "helloworld_lib",
     srcs = ["helloworld.go"],
-    importpath = "basil/packages/helloworld",
+    importpath = "basil/packages/helloworld_lib",
     visibility = ["//visibility:private"],
 )
