@@ -4,12 +4,12 @@ go_binary(
     name = "helloworld",
     embed = [":helloworld_lib"],
     importpath = "basil/packages/helloworld",
-    visibility = ["//visibility:public"],
+    visibility = ["//visibility:private"],
 )
 
 go_library(
     name = "helloworld_lib",
     srcs = ["helloworld.go"],
-    importpath = "basil/packages/helloworld",
+    importpath = "basil/packages/helloworld_lib",
     visibility = ["//visibility:private"],
 )
