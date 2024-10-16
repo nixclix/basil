@@ -4,7 +4,7 @@ go_binary(
     name = "helloworld",
     embed = [":helloworld_lib"],
     importpath = "basil/packages/helloworld",
-    visibility = ["//visibility:public"],
+    visibility = ["//visibility:private"],
 )
 
 go_library(
