@@ -1,0 +1,15 @@
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_binary(
+    name = "helloworld",
+    embed = [":helloworld_lib"],
+    importpath = "basil/packages/helloworld",
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "helloworld_lib",
+    srcs = ["helloworld.go"],
+    importpath = "basil/packages/helloworld",
+    visibility = ["//visibility:private"],
+)
