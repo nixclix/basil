@@ -1,0 +1,11 @@
+build:
+	echo 'test'
+
+gazelle:
+	bazel run //:gazelle
+
+build:
+	bazel build //...
+
+run-helloworld:
+	bazel build //packages/helloworld && bazel run //packages/helloworld

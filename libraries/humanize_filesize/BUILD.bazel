@@ -1,0 +1,14 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "humanize_filesize",
+    srcs = ["humanize_filesize.go"],
+    importpath = "basil/libraries/humanize_filesize",
+    visibility = ["//visibility:public"],
+)
+
+go_test(
+    name = "humanize_filesize_test",
+    srcs = ["humanize_filesize_test.go"],
+    embed = [":humanize_filesize"],
+)
